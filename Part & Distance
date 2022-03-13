@@ -1,0 +1,16 @@
+print ("* ========== ISRAEL TRAIL ========== *")
+total_part = 44
+upto10 = "" 
+total_dist = 0
+
+for i in range(total_part):
+    part = input ("Enter the name of the part: ")
+    dist = int(input ("Type the distance KM of the part: "))
+    print ("\n", part, "is", dist, "KM distance\n")
+    total_dist += dist 
+    if dist > 10:
+        upto10 += part + " | "
+print ("The part up to 10 KM are: ", upto10)
+print ("The total distance of the trail is: ", total_dist)
+
+
