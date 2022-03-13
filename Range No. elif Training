@@ -1,0 +1,26 @@
+def num(a,b,c):
+    if a > b and a > c:
+        return a
+    elif b > a and b > c:
+        return b
+    elif c > a and c > b:
+        return c
+    else:
+        print ("NO max number, try again later")
+
+def n2r (a):
+    lis = []
+    for i in range(a,-1,-1):
+        print (i)
+        lis.append(i)
+    return lis
+
+a = int(input("Enter No. :"))
+b = int(input("Enter No. :"))
+c = int(input("Enter No. :"))
+
+Anum = num (a,b,c)
+num2range = n2r (a)
+print (num2range)
+
+print ("\nThe bigger number is:", Anum)
