@@ -1,0 +1,64 @@
+"""
+purpose: This code getting list of pupils, every pupil has a list
+includ inside his name, his age and grade average.
+
+This program check ages and grades and print the names of the pupils
+who can start the 'exeptional program'
+
+version: 1.0
+author: tal
+file name: 
+"""
+
+#---------------------Functions--------------------#
+
+def check_pupil(pupils):
+	
+	#new list going to include only pupils that the age is older than 15.
+	new_pupils = []
+	for pupil in pupils:
+		age = pupil[1]
+		if age > 15:
+			new_pupils.append (pupil)
+	return (new_pupils)
+
+
+def check_grades (update_pupils):
+	
+	#this list going to include only pupils that the grade average that more than 95
+	final_pupils = []
+	for pupil in update_pupils:
+		grade = pupil[2]
+		if grade > 95:
+			final_pupils.append (pupil)
+	return (final_pupils)
+
+
+def print_pupils (final_pupils):
+	"""
+	summery: gets list of lists pupils, cheks the ages of the pupils 
+	and create a new list that includes only the pupils that older
+	than 15.
+	return a new list.
+	@param list: list of lists with details about every pupil.
+	@type pupils = List[list]
+	@return: the new list.
+	"""
+	#this list going include the pupil from final list and print only the pupils name
+	names = []
+	for pupil in final_pupils:
+		name = pupil [0]
+		names.append (name)
+	print ("The pupils names who can start the program is:{}".format(names))
+
+
+#------------------------Main-------------------------#
+def main ():
+	pupils = [['tal',12,95], ['ron',15,96], ['dalia',18,81], ['ofek',17,98], ['avi',18,96], ['talia',13,100], ['ronen',15,97]]
+	update_pupils = check_pupil(pupils)
+	final_pupils = check_grades (update_pupils)
+	print_pupils(final_pupils)
+	
+
+if __name__ == '__main__':
+	main()
